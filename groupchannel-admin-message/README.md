@@ -4,6 +4,7 @@ This sample app demonstrates how to handle Admin Message in a group channel.
 In the SDK, Admin messages cannot be sent, but only the part that handles the received messages. You can send it from the Dashboard.
 
 ## Requirements
+
 + Android Studio
   + Android Studio Electric Eel | 2022.1.1
 + Android SDK
@@ -15,6 +16,7 @@ In the SDK, Admin messages cannot be sent, but only the part that handles the re
     + android gradle plugin: 7.4.2
 
 ## Admin Message
+
 `GroupChannelChatActivity` is an Activity that manages the main screen for chatting. On this screen, it handles and displays messages being exchanged between users. To perform these functions, it utilizes an object called `messageCollection`.
 
 The `messageCollection` object collects new messages sent by users, and helps to sequentially sort and process these messages. These collected and sorted messages are then handled through the `GroupChannelChatAdapter`.
@@ -86,6 +88,7 @@ inner class GroupChatAdminViewHolder(private val binding: ListItemChatAdminBindi
 ```
 
 ## How to run
+
 ``` bash
 ./gradlew :app:installDebug
 adb shell am start -n "com.sendbird.chat.sample.groupchannel.adminmessage/com.sendbird.chat.sample.groupchannel.adminmessage.base.SplashActivity" -a android.intent.action.MAIN -c android.intent.category.LAUNCHER --splashscreen-show-icon
